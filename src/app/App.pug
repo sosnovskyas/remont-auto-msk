@@ -1,0 +1,9 @@
+#app
+  header.header
+    router-link(to='/', exact='')
+      img.logo(src='~public/logo-48.png', alt='logo')
+    router-link(to='/') Home
+    router-link(to='/top') Top
+
+  transition(name='fade', mode='out-in')
+    router-view.view
