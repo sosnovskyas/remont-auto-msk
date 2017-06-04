@@ -45,11 +45,12 @@ module.exports = {
         test: /\.css$/,
         use: isProd
           ? ExtractTextPlugin.extract({
-              use: 'css-loader?minimize',
-              fallback: 'vue-style-loader'
-            })
+            use: 'css-loader?minimize',
+            fallback: 'vue-style-loader'
+          })
           : ['vue-style-loader', 'css-loader']
-      }
+      },
+      {test: /\.pug$/, loader: "pug-loader"},
     ]
   },
   performance: {
@@ -58,14 +59,14 @@ module.exports = {
   },
   plugins: isProd
     ? [
-        new webpack.optimize.UglifyJsPlugin({
-          compress: { warnings: false }
-        }),
-        new ExtractTextPlugin({
-          filename: 'common.[chunkhash].css'
-        })
-      ]
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {warnings: false}
+      }),
+      new ExtractTextPlugin({
+        filename: 'common.[chunkhash].css'
+      })
+    ]
     : [
-        new FriendlyErrorsPlugin()
-      ]
+      new FriendlyErrorsPlugin()
+    ]
 }
