@@ -6,8 +6,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "qwe"
+    "url": "git+https://github.com/sosnovskyas/remont-auto-msk.git"
   },
+  "bugs": {
+    "url": "https://github.com/sosnovskyas/remont-auto-msk/issues"
+  },
+  "homepage": "https://github.com/sosnovskyas/remont-auto-msk#readme",
   "author": "Sosnovsky Alexey <sosnovsky.as@gmail.com>",
   "scripts": {
     "dev": "node server",
@@ -34,6 +38,5 @@
     "vue-server-renderer": "2.3.3",
     "vuex": "2.3.1",
     "vuex-router-sync": "4.2.0"
-  },
-  "license": "GPL-3.0"
+  }
 }
